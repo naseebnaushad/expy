@@ -6,14 +6,37 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('Grid Demo')),
+      appBar: AppBar(centerTitle: true, title: const Text('Expy')),
       body: GridView.count(
-        crossAxisCount: 2, // We want 2 columns
+        crossAxisCount: 2,
+        padding: const EdgeInsets.all(10),
+        crossAxisSpacing: 10,
+        mainAxisSpacing: 10,
         children: [
-          Container(color: Colors.red),
-          Container(color: Colors.green),
-          Container(color: Colors.blue),
-          Container(color: Colors.orange),
+          Container(
+            decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(20),
+              color: Colors.red,
+            ),
+          ),
+          Container(
+            decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(20),
+              color: Colors.green,
+            ),
+          ),
+          Container(
+            decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(20),
+              color: Colors.blue,
+            ),
+          ),
+          Container(
+            decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(20),
+              color: Colors.orange,
+            ),
+          ),
         ],
       ),
     );
